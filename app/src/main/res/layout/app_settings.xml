@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/as_background_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:tools="http://schemas.android.com/tools">
+
+ 	<!--  header  -->
+    
+    <RelativeLayout
+        android:id="@+id/as_header"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="@color/debug6" >
+
+        <ImageView
+            android:id="@+id/as_header_icon"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/geargrey64" />
+
+        <TextView
+            android:id="@+id/as_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/as_header_icon"
+            android:text="@string/settings_label_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/as_title_text_color"
+            android:textSize="@dimen/chooser_label_text_size" />
+    </RelativeLayout>
+
+	<!--  body  -->
+		
+    <fragment
+        android:id="@+id/prefs_fragment"
+        android:name="org.surveytools.flightlogger.AppSettingsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    
+	<!--  footer  -->
+    
+    <LinearLayout
+        android:id="@+id/as_footer"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_gravity="bottom"
+        android:background="@color/debug4"
+        android:gravity="center_horizontal"         android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/as_reset_button"
+            style="@style/ButtonBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/fs_button_white"
+            android:includeFontPadding="false"
+            android:minHeight="28dp"
+            android:minWidth="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/stopbutton"
+            android:text="@string/as_reset_button_text"
+            android:textColor="@color/fs_footer_button_colors"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/as_ok_button"
+            style="@style/ButtonBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/fs_button_green"
+            android:includeFontPadding="false"
+            android:minHeight="28dp"
+            android:minWidth="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/stopbutton"
+            android:text="@string/modal_ok"
+            android:textColor="@color/fs_footer_button_colors"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        </LinearLayout>
+
+</LinearLayout>

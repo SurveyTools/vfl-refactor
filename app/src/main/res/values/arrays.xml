@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<string-array name="pref_transect_parsing_method_default_names">
+	    <item>Adjacent Pairs</item>
+        <item>Angles over 5º</item>
+	    <item>Angles over 10º</item>
+	    <item>Angles over 15º</item>
+	    <item>Angles over 20º</item>
+	    <item>Angles over 30º</item>
+	</string-array>
+
+	<string-array name="pref_transect_parsing_method_default_values">
+	    <item>tpm_adjacent_pairs</item>
+        <item>tpm_angles_5</item>
+	    <item>tpm_angles_10</item>
+	    <item>tpm_angles_15</item>
+	    <item>tpm_angles_20</item>
+	    <item>tpm_angles_30</item>
+	</string-array>
+
+ 	<string-array name="pref_altitude_unit_names">
+	    <item>FEET</item>
+	    <item>METERS</item>
+	</string-array>
+
+	<string-array name="pref_altitude_unit_values">
+	    <item>distance_feet</item>
+	    <item>distance_meters</item>
+	</string-array>
+	
+	
+	<string-array name="pref_speed_unit_names">
+	    <item>KNOTS (Nautical Miles Per Hour)</item>
+	    <item>KM/H (Kilometers Per Hour)</item>
+	    <item>MPH (Miles Per Hour)</item>
+	</string-array>
+
+	<string-array name="pref_speed_unit_values">
+	    <item>velocity_nautical_miles_per_hour</item>
+	    <item>velocity_kilmeters_per_hour</item>
+	    <item>velocity_miles_per_hour</item>
+	</string-array>
+	
+	<string-array name="pref_distance_unit_names">
+	    <item>KILOMETERS</item>
+	    <item>MILES</item>
+	    <item>NAUTICAL MILES</item>
+	</string-array>
+
+	<string-array name="pref_distance_unit_values">
+	    <item>distance_kilometers</item>
+	    <item>distance_miles</item>
+	    <item>distance_nautical_miles</item>
+	</string-array>
+	
+	<string-array name="pref_rangefinder_names">
+	    <item>Mindrum AgLaser</item>
+	    <item>Lightware SF30/XLR</item>
+	    <item>Lightware SF03/XLR</item>
+	</string-array>
+
+	<string-array name="pref_rangefinder_values">
+	    <item>rangefinder_aglaser</item>
+	    <item>rangefinder_sf30xlr</item>
+	    <item>rangefinder_sf03xlr</item>
+	</string-array>
+	
+   	<string-array name="pref_data_averaging_method_names">
+	    <item>Median</item>
+		<item>Average (Arithmetic Mean)</item>
+	</string-array>
+
+	<string-array name="pref_data_averaging_method_values">
+	    <item>dam_median</item>
+	   <item>dam_mean</item>
+	</string-array>
+
+	<string-array name="pref_data_averaging_window_names">
+		 <item>3 samples</item>
+	    <item>5 samples</item>
+	    <item>7 samples</item>
+	    <item>9 samples</item>
+	 </string-array>
+
+	<string-array name="pref_data_averaging_window_values">
+	    <item>daw_3</item>
+	    <item>daw_5</item>
+	    <item>daw_7</item>
+	    <item>daw_9</item>
+	</string-array>
+	
+		<string-array name="empty_array"/>
+
+</resources>

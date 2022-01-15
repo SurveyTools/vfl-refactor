@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="org.surveytools.flightlogger.geo.GPSDebugActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text=""
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <!-- <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/enable_laser_alt_button" /> -->
+        </LinearLayout>
+        
+       <GridLayout
+           android:layout_width="768dp"
+           android:layout_height="421dp"
+           android:columnCount="2"
+           android:orientation="horizontal"
+           android:rowCount="8" >
+
+            <TextView
+                android:id="@+id/gpsLabel1"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:ems="10"
+                android:text="@string/lat_label"
+                android:textSize="32sp" >
+
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal1"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel2"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:ems="10"
+                android:text="@string/long_label"
+                android:textSize="32sp" >
+
+            </TextView>
+            
+       		<TextView
+                android:id="@+id/gpsVal2"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel3"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="@string/alt_label"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal3"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel4"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="@string/speed_label"
+                
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal4"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel5"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="@string/crosstrack_label"
+                
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal5"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel6"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="@string/distance_label"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal6"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel7"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="Start Lat"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal7"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsLabel8"
+                android:layout_width="192dp"
+                android:layout_gravity="left|top"
+                android:text="Start Lon"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/gpsVal8"
+                android:layout_width="392dp"
+                android:layout_gravity="left|top"
+                android:textSize="32sp"
+                android:ems="10" >
+            </TextView>
+          
+
+        </GridLayout>
+        
+
+    </FrameLayout>
+
+</FrameLayout>

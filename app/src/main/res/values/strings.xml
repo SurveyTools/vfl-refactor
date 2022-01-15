@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_sync">sync</string>
+    <string name="pref_sync_summ">summary</string>
+    <string name="pref_syncConnectionType">conn type</string>
+    <string name="pref_syncConnectionTypes_default">default</string>
+
+    <string name="blank"></string>
+    <string name="app_name">FlightLogger</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="lat_label">Latitude</string>
+    <string name="long_label">Longitude</string>
+    <string name="alt_label">Altitude</string>
+    <string name="speed_label">Speed</string>
+    <string name="crosstrack_label">Cross Track</string>
+    <string name="distance_label">Distance</string>
+    <string name="action_show_about_menu_item">About</string>
+    <string name="action_reset_logfile_menu_item">Create Flight Summary</string>
+    <string name="action_show_settings_menu_item">Settings</string>
+    <string name="action_show_serial_console">Serial Debug Console</string>
+    <string name="action_load_gpx">Load GPX File</string>
+    <string name="action_altimeter">Laser Altimeter</string>
+    <string name="action_show_gps_debug">GPS Debug</string>
+    <string name="action_convert_cvs_logfile">Convert Logfile to GPX</string>
+    <string name="altitude_placeholder">299</string>
+    <string name="nav_status_gps_text">GPS</string>
+    <string name="nav_status_alt_text">ALT</string>
+    <string name="nav_status_bat_text">BAT</string>
+    <string name="nav_status_box_text">PWR</string>
+    <string name="image_button_no_desc"></string>
+    <string name="nav_speed_title">GROUND\nSPEED</string>
+    <string name="nav_altitude_title">AGL</string>
+    <string name="nav_no_gpx_error_text">Load a GPX File...</string>
+
+    <!--  PREF_UNITS -->
+    <string name="nav_distance_units_kilometers">KM</string>
+    <string name="nav_distance_units_miles">MILES</string>
+    <string name="nav_distance_units_nautical_miles">NM</string>
+    <string name="nav_distance_units_lowercase_kilometers">km</string>
+    <string name="nav_distance_units_lowercase_miles">miles</string>
+    <string name="nav_distance_units_lowercase_nautical_miles">nm</string>
+    <string name="nav_speed_units_knots">KNOTS</string>
+    <string name="nav_speed_units_mph">MPH</string>
+    <string name="nav_speed_units_kmh">KM/H</string>
+    <string name="nav_altitude_units_feet">FEET</string>
+    <string name="nav_altitude_units_meters">METERS</string>
+
+    <string name="nav_msg_recording_text">** LOGGING **</string>
+    <string name="nav_action_start_transect">START TRANSECT</string>
+    <string name="nav_action_stop_transect">STOP TRANSECT</string>
+    <string name="nav_action_start_logging">START LOGGING</string>
+    <string name="nav_action_stop_logging">STOP LOGGING</string>
+
+    <string name="nav_about_title">About FlightLogger</string>
+    <string name="nav_about_version_base">Version</string>
+    <string name="nav_about_version_missing">**missing**</string>
+
+    <string name="nav_confirm_back_message">Are you sure you want to exit?</string>
+    <string name="nav_confirm_yes">YES</string>
+    <string name="nav_confirm_no">NO</string>
+
+    <string name="chooser_label_transect_graph">Transects</string>
+
+    <string name="nt_label_title">Stopping Transect...</string>
+    <string name="nt_label_cur_transect">Current Transect:</string>
+    <string name="nt_label_next_transect">Next Transect:</string>
+    <string name="nt_stop_button_text">BREAK</string>
+    <string name="nt_next_button_text">NEXT</string>
+
+    <string name="settings_label_title">Settings</string>
+    <string name="as_reset_button_text">Reset To Defaults</string>
+    <string name="as_confirm_reset_title">Confirm</string>
+    <string name="as_confirm_reset_message">Reset All Settings to Default values?</string>
+    <string name="as_confirm_reset_ok">Reset All</string>
+    <string name="as_confirm_reset_cancel">Cancel</string>
+
+    <string name="fs_label_title">GPX Settings</string>
+    <string name="fs_label_file">File:</string>
+    <string name="fs_label_route">Route:</string>
+    <string name="fs_label_transect_list">Transect:</string>
+
+    <string name="fs_confirm_stop_logging_title">Stop Logging?</string>
+    <string name="fs_confirm_stop_logging_message"></string>
+    <string name="fs_confirm_stop_logging_ok">Stop Logging</string>
+    <string name="fs_confirm_stop_logging_cancel">Cancel</string>
+    <string name="modal_ok">OK</string>
+    <string name="modal_cancel">Cancel</string>
+
+    <string name="transectsummary_title">Transect Summary</string>
+    <string name="transectsummary_notransct_title">Summary</string>
+    <string name="transectsummary_name_label"></string>
+    <string name="transectsummary_average_speed_label">Average Speed:</string>
+    <string name="transectsummary_average_altitude_label">Average Altitude:</string>
+    <string name="transectsummary_total_distance_label">Distance:</string>
+    <string name="transectsummary_total_duration_label">Duration:</string>
+
+    <!-- ref: http://myhandbook.info/codes_htmlchr.html  -->
+    <string name="pref_show_debug_title">Show Debugging Info</string>
+    <string name="pref_plus_minus_prefix">±</string>
+    <string name="pref_units_feet_suffix">feet</string>
+    <string name="pref_units_meters_suffix">meters</string>
+    <string name="pref_altitude_target_title">Target Altitude</string>
+    <string name="pref_altitude_target_editor_title">Target Altitude in FEET</string>
+    <string name="pref_altitude_radius_title">Altitude Scale (distance from center of graph to top or bottom)</string>
+    <string name="pref_altitude_radius_editor_title">Altitude Scale (distance from center of graph to top or bottom)</string>
+    <string name="pref_navigation_radius_title">Navigation Scale (distance from center of graph to left or right edge)</string>
+    <string name="pref_navigation_radius_editor_title">Navigation Scale in FEET (distance from center of graph to left or right edge)</string>
+    <string name="pref_use_custom_transect_parsing_method_title">Use Custom GPX Transect Parsing Method</string>
+    <string name="pref_transect_parsing_method_title">GPX Transect Parsing Method</string>
+
+    <string name="pref_show_debug_default_value">false</string>
+    <string name="pref_altitude_target_default_value">300</string>
+    <string name="pref_altitude_radius_default_value">100</string>
+    <string name="pref_navigation_radius_default_value">1000</string>
+    <string name="pref_use_custom_transect_parsing_method_default_value">false</string>
+    <string name="pref_transect_parsing_method_default_value">tpm_angles_15</string>
+
+    <!--  PREF_UNITS -->
+    <string name="pref_distance_units_title">Show Distance In</string>
+    <string name="pref_speed_units_title">Show Speed In</string>
+    <string name="pref_altitude_units_title">Show Altitude In</string>
+    <string name="pref_distance_units_default_value">distance_miles</string>
+    <string name="pref_speed_units_default_value">velocity_nautical_miles_per_hour</string>
+    <string name="pref_altitude_units_default_value">distance_feet</string>
+
+    <string name="pref_rangefinder_title">Laser Altimeter</string>
+    <string name="pref_rangefinder_default_value">rangefinder_aglaser</string>
+
+    <string name="pref_data_averaging_enabled_title">Use Data Averaging On Main Screen</string>
+    <string name="pref_data_averaging_method_title">Data Averaging Method</string>
+    <string name="pref_data_averaging_window_title">Data Averaging Window</string>
+    <string name="pref_data_averaging_enabled_default_value">false</string>
+    <string name="pref_data_averaging_method_default_value">dam_median</string>
+    <string name="pref_data_averaging_window_default_value">daw_3</string>
+    <string name="baud_rate">Baud Rate</string>
+    <string name="stop_bits">Stop Bits</string>
+    <string name="connect">Connect</string>
+
+
+</resources>

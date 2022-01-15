@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!--  note: use PreferenceCategory (with android:title) if you want headers -->
+
+		<!--  PREF_UNITS -->
+		    
+	<org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:key="PREF_RANGEFINDER_TYPE_KEY"
+        android:title="@string/pref_rangefinder_title"
+        android:dialogTitle="@string/pref_rangefinder_title"
+        android:entries="@array/pref_rangefinder_names"
+        android:entryValues="@array/pref_rangefinder_values"
+        android:defaultValue="@string/pref_rangefinder_default_value" />
+ 
+    	<org.surveytools.flightlogger.util.EditDistancePreferenceShowSummary
+        android:key="PREF_ALTITUDE_TARGET_KEY"
+        android:title="@string/pref_altitude_target_title"
+        android:dialogTitle="@string/pref_altitude_target_editor_title"
+        android:defaultValue="@string/pref_altitude_target_default_value" />
+     
+    	<org.surveytools.flightlogger.util.EditDistancePreferenceShowSummary
+        android:key="PREF_ALTITUDE_RADIUS_KEY"
+        android:title="@string/pref_altitude_radius_title"
+        android:dialogTitle="@string/pref_altitude_radius_editor_title"
+        android:defaultValue="@string/pref_altitude_radius_default_value" />
+     
+  	   <org.surveytools.flightlogger.util.EditDistancePreferenceShowSummary
+        android:key="PREF_NAVIGATION_RADIUS_KEY"
+        android:title="@string/pref_navigation_radius_title"
+        android:dialogTitle="@string/pref_navigation_radius_editor_title"
+        android:defaultValue="@string/pref_navigation_radius_default_value" />
+     
+   	   <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:key="PREF_DISPLAY_UNITS_DISTANCE_KEY"
+        android:title="@string/pref_distance_units_title"
+        android:dialogTitle="@string/pref_distance_units_title"
+        android:entries="@array/pref_distance_unit_names"
+        android:entryValues="@array/pref_distance_unit_values"
+        android:defaultValue="@string/pref_distance_units_default_value" />
+ 
+    <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:key="PREF_DISPLAY_UNITS_SPEED_KEY"
+        android:title="@string/pref_speed_units_title"
+        android:dialogTitle="@string/pref_speed_units_title"
+        android:entries="@array/pref_speed_unit_names"
+        android:entryValues="@array/pref_speed_unit_values"
+        android:defaultValue="@string/pref_speed_units_default_value" />
+   	   
+    <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:key="PREF_DISPLAY_UNITS_ALTITUDE_KEY"
+        android:title="@string/pref_altitude_units_title"
+        android:dialogTitle="@string/pref_altitude_units_title"
+        android:entries="@array/pref_altitude_unit_names"
+        android:entryValues="@array/pref_altitude_unit_values"
+        android:defaultValue="@string/pref_altitude_units_default_value" />
+ 
+  	   <CheckBoxPreference
+        android:key="PREF_USE_CUSTOM_PARSING_METHOD_KEY"
+        android:title="@string/pref_use_custom_transect_parsing_method_title"
+        android:defaultValue="@string/pref_use_custom_transect_parsing_method_default_value" />
+    
+  	   <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:dependency="PREF_USE_CUSTOM_PARSING_METHOD_KEY"
+        android:key="PREF_TRANSECT_PARSING_METHOD_KEY"
+        android:title="@string/pref_transect_parsing_method_title"
+        android:dialogTitle="@string/pref_transect_parsing_method_title"
+        android:entries="@array/pref_transect_parsing_method_default_names"
+        android:entryValues="@array/pref_transect_parsing_method_default_values"
+        android:defaultValue="@string/pref_transect_parsing_method_default_value" />
+  	   
+  	   <CheckBoxPreference
+        android:key="PREF_DATA_AVERAGING_ENABLED_KEY"
+        android:title="@string/pref_data_averaging_enabled_title"
+        android:defaultValue="@string/pref_data_averaging_enabled_default_value" />
+    
+   	   <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:dependency="PREF_DATA_AVERAGING_ENABLED_KEY"
+        android:key="PREF_DATA_AVERAGING_METHOD_KEY"
+        android:title="@string/pref_data_averaging_method_title"
+        android:dialogTitle="@string/pref_data_averaging_method_title"
+        android:entries="@array/pref_data_averaging_method_names"
+        android:entryValues="@array/pref_data_averaging_method_values"
+        android:defaultValue="@string/pref_data_averaging_method_default_value" />
+    
+  	   <org.surveytools.flightlogger.util.ListPreferenceShowSummary
+        android:dependency="PREF_DATA_AVERAGING_ENABLED_KEY"
+        android:key="PREF_DATA_AVERAGING_WINDOW_KEY"
+        android:title="@string/pref_data_averaging_window_title"
+        android:dialogTitle="@string/pref_data_averaging_window_title"
+        android:entries="@array/pref_data_averaging_window_names"
+        android:entryValues="@array/pref_data_averaging_window_values"
+        android:defaultValue="@string/pref_data_averaging_window_default_value" />
+  	   	   
+     <SwitchPreference
+        android:key="PREF_SHOW_DEBUG_KEY"
+        android:title="@string/pref_show_debug_title"
+        android:defaultValue="@string/pref_show_debug_default_value" />
+
+</PreferenceScreen>

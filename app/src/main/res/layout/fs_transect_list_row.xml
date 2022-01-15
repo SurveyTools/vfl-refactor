@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/fs_transect_row_arrow"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="4dp"
+        android:src="@drawable/fs_row_arrow_blue" />
+
+    <ImageView
+        android:id="@+id/fs_transect_row_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:src="@drawable/filefolder" />
+
+    <TextView
+        android:id="@+id/fs_transect_row_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:text="List item!!!"
+        android:textColor="@color/fs_transect_list_item_text_color"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/fs_transect_row_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:text="state"
+        android:textColor="@color/fs_transect_list_item_text_color"
+        android:textSize="28sp" />
+
+</LinearLayout> 

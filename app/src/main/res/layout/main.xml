@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/debug4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/nav_header"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:background="@color/debug6"
+        android:orientation="horizontal" >
+
+        <!-- /nav_header -->
+
+        <RelativeLayout
+            android:id="@+id/nav_header_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+ 	  		android:clickable="true"
+			android:onClick="browseGpxFiles"
+            android:background="@drawable/nav_load_file_button" >
+
+            <Button
+                android:id="@+id/nav_header_file_button"
+                android:layout_width="44dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/filefolder"
+                android:onClick="browseGpxFiles"
+                android:text=""
+  	  		android:clickable="false"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/nav_header_route_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="64dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/nav_header_file_button"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="Example_survey_route.gpx"
+                android:textColor="@color/nav_header_route_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/nav_header_transect_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nav_header_route_text"
+                android:layout_marginRight="64dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/nav_header_file_button"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="T03_S ~ T03_N"
+                android:textColor="@color/nav_header_transect_text"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nav_header_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/nav_header_route_text"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/nav_no_gpx_error_text"
+                android:textColor="@color/nav_header_file_message_text_color"
+                android:textSize="28sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_header_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="9"
+            android:background="@color/debug2" >
+
+            <Button
+                android:id="@+id/nav_header_status_gps"
+                style="@style/AppTheme"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/nav_status_green"
+                android:text="@string/nav_status_gps_text"
+                android:textColor="@color/nav_header_status_text_over_green"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nav_header_status_alt"
+                style="@style/AppTheme"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/nav_status_red"
+                android:text="@string/nav_status_alt_text"
+                android:textColor="@color/nav_header_status_text_over_red"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nav_header_status_bat"
+                style="@style/AppTheme"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/nav_status_yellow"
+                android:text="@string/nav_status_bat_text"
+                android:textColor="@color/nav_header_status_text_over_yellow"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nav_header_status_box"
+                style="@style/AppTheme"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/nav_status_ignore"
+                android:text="@string/nav_status_box_text"
+                android:textColor="@color/nav_header_status_text_over_ignore"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/nav_header_settings_button"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/image_button_no_desc"
+            android:scaleType="fitXY"
+            android:src="@drawable/nav_settings_button" 
+            android:onClick="showMainMenuPopup"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:dividerPadding="4dp"
+        android:orientation="horizontal" >
+
+        <!-- TRANSECT NAVIGATION SYSTEM -->
+
+        <org.surveytools.flightlogger.util.SquareRelativeLayout
+            android:id="@+id/navscreenLeft"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/debug1"
+            android:clipChildren="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" >
+        </org.surveytools.flightlogger.util.SquareRelativeLayout>
+
+        <!-- RIGHT HALF OF SCREEN -->
+
+        <LinearLayout
+            android:id="@+id/navscreenRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/debug1"
+            android:clipChildren="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical" >
+
+            <!-- ALTITUDE WRAPPER -->
+
+            <RelativeLayout
+                android:id="@+id/nav_altitude_group_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/debug4" >
+
+                <!-- ALTITUDE STUFF -->
+
+                <LinearLayout
+                    android:id="@+id/nav_altitude_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/debug2"
+                    android:gravity="top"
+                    android:orientation="horizontal" >
+
+                    <!-- MEC_TODO problem - texts wraps and disappears! -->
+
+                    <TextView
+                        android:id="@+id/nav_altitude_value"
+                        android:layout_width="0dp"
+                        android:layout_height="220dp"
+                        android:layout_gravity="top"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/debug3"
+                        android:bufferType="spannable"
+                        android:gravity="right|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="2"
+                        android:text="RNG"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/nav_altitude_value"
+                        android:textSize="190sp" />
+
+                    <LinearLayout
+                        android:id="@+id/nav_altitude_righthalf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/debug3"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/nav_altitude_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@color/debug4"
+                            android:gravity="center_vertical"
+                            android:text="@string/nav_altitude_title"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/nav_altitude_label"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:id="@+id/nav_altitude_units"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_margin="4dp"
+                            android:background="@color/debug4"
+                            android:text="@string/nav_altitude_units_feet"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/nav_altitude_units"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- ALTITUDE BACKGROUND -->
+
+                <ImageView
+                    android:id="@+id/nav_altitude_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="224dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image_button_no_desc"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/navaltitudeborder" />
+            </RelativeLayout>
+
+            <!-- SPEED WRAPPER -->
+            <!-- TODO fix android:layout_marginTop="20dp" is a hack -->
+
+            <RelativeLayout
+                android:id="@+id/nav_speed_group_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@color/debug4" >
+
+                <!-- SPEED -->
+
+                <LinearLayout
+                    android:id="@+id/nav_speed_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/debug2"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <org.surveytools.flightlogger.util.SquishyTextView
+                        android:id="@+id/nav_speed_value"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="top"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/debug3"
+                        android:bufferType="spannable"
+                        android:gravity="right"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="84"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/nav_speed_value"
+                        android:textSize="110sp" />
+
+                    <LinearLayout
+                        android:id="@+id/nav_speed_righthalf"
+                        android:layout_width="104dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/debug3"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/nav_speed_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@color/debug4"
+                            android:gravity="center_vertical"
+                            android:text="@string/nav_speed_title"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/nav_speed_label"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/nav_speed_units"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_margin="4dp"
+                            android:background="@color/debug4"
+                            android:text="@string/nav_speed_units_knots"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/nav_speed_units"
+                            android:textSize="24sp" />
+
+                        <!-- /nav_speed_righthalf -->
+                    </LinearLayout>
+
+                    <!-- /nav_speed_group -->
+                </LinearLayout>
+
+                <!-- SPEED BACKGROUND -->
+
+                <ImageView
+                    android:id="@+id/nav_speed_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image_button_no_desc"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/navspeedborder" />
+
+                <!-- /nav_speed_group_wrapper -->
+            </RelativeLayout>
+
+            <!-- /navscreenRight -->
+        </LinearLayout>
+
+        <!-- /linearLayout1 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_footer"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@color/debug6"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <!-- /LinearLayout -->
+
+        <TextView
+            android:id="@+id/nav_footer_status_left"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Recording"
+            android:textColor="@color/nav_footer_status_recording"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/nav_footer_mode_button"
+            style="@style/ButtonBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="false"
+            android:background="@drawable/roundedbutton_red"
+            android:includeFontPadding="false"
+            android:minHeight="28dp"
+            android:minWidth="40dp"
+            android:onClick="onToggleStartStop"
+            android:scaleType="fitXY"
+            android:text="STOP"
+            android:textColor="@color/nav_footer_stop"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nav_footer_status_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="8:16 remaining"
+            android:textColor="@color/nav_footer_status"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- /main_layout -->
+
+</LinearLayout>

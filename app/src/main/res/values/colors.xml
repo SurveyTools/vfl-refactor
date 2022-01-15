@@ -1,0 +1,102 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="debug0">#ff555555</color>
+    <color name="debug1">#ffaa0000</color>
+    <color name="debug2">#ff00aa00</color>
+    <color name="debug3">#ff0000aa</color>
+    <color name="debug4">#ff00aaaa</color>
+    <color name="debug5">#ffaaaaaa</color>
+    <color name="debug6">#ffaaaa00</color>
+    <color name="nav_background">#ff000000</color>
+    <!--  header and footer bg ff111111 -->
+    <color name="nav_header_bg">#ff111111</color>
+    <color name="nav_footer_bg">#ff111111</color>
+    <color name="nav_ips_circle">#ff777777</color>
+    <color name="nav_ips_notches">#ffaaaaaa</color>
+    <color name="nav_ips_axis">#ff333333</color>
+    <color name="nav_ips_guides">#ffffffff</color>
+    <color name="nav_ips_guides_warning">#ffffff00</color>
+    <color name="nav_ips_guides_error">#ffff0000</color>
+
+    <color name="nav_altitude_value">#ffffffff</color>
+    <color name="nav_altitude_yellow">#ffffff00</color>
+    <color name="nav_altitude_label">#ffcccccc</color>
+    <color name="nav_altitude_units">#ff888888</color>
+
+    <color name="nav_speed_value">#ffffffff</color>
+    <color name="nav_speed_label">#ffcccccc</color>
+    <color name="nav_speed_units">#ff888888</color>
+
+    <color name="nav_header_route_text">#ff888888</color>
+    <color name="nav_header_transect_text">#ffcccccc</color>
+    <color name="nav_header_status_text_over_green">#cc000000</color>
+    <color name="nav_header_status_text_over_red">#eeffffff</color>
+    <color name="nav_header_status_text_over_yellow">#cc000000</color>
+    <color name="nav_header_status_text_over_grey">#cc000000</color>
+    <color name="nav_header_status_text_over_ignore">#ccaaaaaa</color>
+    <color name="nav_header_file_message_text_color">#ffFC0017</color>
+    <color name="nav_footer_red">#ffcc0000</color>
+
+    <color name="nav_footer_status_recording">#ff44dd44</color>
+    <color name="nav_footer_status">#ff888888</color>
+    <color name="nav_footer_stop">#ffcccccc</color>
+
+    <!--  chooser/shared settings -->
+    <color name="nt_background_color">#ff464637</color>
+    <color name="nt_header_color">#ff222222</color>
+    <color name="nt_footer_color">#ff464637</color>
+    <color name="nt_title_text_color">#ffeeeeee</color>
+    <color name="nt_item_label_text_color">#ff808277</color>
+    <color name="nt_cur_item_label_text_color">#ff94948D</color>
+    <color name="nt_next_item_label_text_color">#ffDDDDDD</color>
+    <color name="nt_transect_list_item_text_color">#ffDDDDDD</color>
+    <color name="nt_transect_list_item_state_active_color">#ffaaaaaa</color>
+
+    <!--  flight settings -->
+    <color name="fs_background_color">#ff464637</color>
+    <color name="fs_header_color">#ff222222</color>
+    <color name="fs_footer_color">#ff464637</color>
+    <color name="fs_title_text_color">#ffeeeeee</color>
+    <color name="fs_item_label_text_color">#ff808277</color>
+    <color name="fs_item_value_text_color">#ffDDDDDD</color>
+    <color name="fs_transect_list_item_text_color">#ffDDDDDD</color>
+    <color name="fs_transect_list_item_state_active_color">#ffaaaaaa</color>
+
+    <color name="transect_summary_item_header_bg_color">#ff0000ff</color>
+    <color name="transect_summary_item_header_txt_color">#ffeeeeee</color>
+    <color name="transect_summary_item_label_color">#ff777777</color>
+    <color name="transect_summary_item_value_color">#ff000000</color>
+
+    <!--  app settings -->
+    <color name="as_background_color">#ff444444</color>
+    <color name="as_header_color">#ff222222</color>
+    <color name="as_footer_color">#ff222222</color>
+    <color name="as_title_text_color">#ffeeeeee</color>
+    <color name="as_item_label_text_color">#ff808277</color>
+    <color name="as_item_value_text_color">#ffDDDDDD</color>
+    <color name="as_transect_list_item_text_color">#ffDDDDDD</color>
+    <color name="as_transect_list_item_state_active_color">#ffaaaaaa</color>
+
+    <!--  transect graph -->
+    <color name="transect_graph_normal">#99BEC19C</color>
+    <color name="transect_graph_active">#ffDDDDDD</color>
+    <color name="transect_graph_next">#ff00DE00</color>
+    <color name="transect_mini_graph_border">#ff64644E</color>
+
+    <!--  footer status left -->
+    <color name="nav_footer_status_text_red">#ffFC0017</color>
+    <color name="nav_footer_status_text_green">#ff44dd44</color>
+    <color name="nav_footer_status_text_grey">#ff888888</color>
+
+    <!--  footer mode button -->
+    <color name="nav_footer_mode_text_over_red">#ffcccccc</color>
+    <color name="nav_footer_mode_text_over_grey">#ff555555</color>
+    <color name="nav_footer_mode_text_over_green">#ffcccccc</color>
+
+    <!-- serial console -->
+    <color name="colorRecieveText">#00FF00</color>
+    <color name="colorSendText">#82CAFF</color>
+    <color name="colorStatusText">#FFDB58</color>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_altitude">190dp</dimen>
+    <dimen name="nav_absalt_value">190sp</dimen>
+    <dimen name="chooser_label_text_size">28sp</dimen>
+    <dimen name="chooser_value_text_size">36sp</dimen>
+    <dimen name="chooser_big_button_height">140dp</dimen>
+    <dimen name="chooser_vertical_button_top_spacer">5dp</dimen>
+    <dimen name="mini_transect_height">56dp</dimen>
+    <dimen name="mini_transect_width">56dp</dimen>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.surveytools.flightlogger"
+    android:versionCode="1"
+    android:versionName="0.7.5" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.surveytools.flightlogger.FlightLogger"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name="org.surveytools.flightlogger.geo.GPSDebugActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/action_show_gps_debug">
+        </activity>
+        <activity
+            android:name="org.surveytools.flightlogger.FileBrowser"
+            android:exported="false"
+            android:label="@string/action_load_gpx" >
+        </activity>
+        <activity
+            android:name="org.surveytools.flightlogger.altimeter.SerialConsole"
+            android:exported="false"
+            android:label="@string/action_show_serial_console" >
+        </activity>
+<!--        <activity-->
+<!--            android:name="org.surveytools.flightlogger.geo.RouteChooserDialog"-->
+<!--            android:label="Choose a Route" >-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="org.surveytools.flightlogger.geo.TransectChooserDialog"-->
+<!--            android:label="Choose a Transect" >-->
+<!--        </activity>-->
+        <activity
+            android:name="org.surveytools.flightlogger.CourseSettingsActivity"
+            android:label="GPX Settings"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="org.surveytools.flightlogger.NextTransectActivity"
+            android:label="Logging Stopped"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="org.surveytools.flightlogger.AppSettingsActivity"
+            android:label="Settings"
+            android:exported="false"
+            android:theme="@style/SettingsTheme" >
+        </activity>
+        <service android:name="org.surveytools.flightlogger.altimeter.AltimeterService" />
+
+        <service android:name="org.surveytools.flightlogger.geo.NavigationService" />
+
+        <service android:name="org.surveytools.flightlogger.logger.LoggingService" />
+
+        <!-- Uncommenting the following block will (in theory) start this app on reboot -->
+        <!--
+        <receiver android:enabled="true" android:name="org.surveytools.flightlogger.util.BootupReceiver"
+        	android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+	        <intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.DEFAULT" />
+	        </intent-filter>
+		</receiver>
+        -->
+    </application>
+
+</manifest>
